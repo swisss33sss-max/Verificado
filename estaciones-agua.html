@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Estaciones de Agua</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .stations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .station-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .station-card:hover {
+            transform: translateY(-5px);
+            border-color: #4facfe;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+        }
+
+        .station-card.active {
+            border-color: #00f2fe;
+            background: rgba(79, 172, 254, 0.1);
+        }
+
+        .station-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .station-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4facfe;
+        }
+
+        .station-provider {
+            font-size: 0.85rem;
+            color: #aaa;
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+
+        .station-serie {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .station-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .stat-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4facfe;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            color: #4facfe;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: #888;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            color: #4facfe;
+        }
+
+        .tab.active {
+            color: #4facfe;
+            border-bottom-color: #4facfe;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            color: #000;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #fa709a, #fee140);
+            color: #000;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        .input-group input,
+        .input-group textarea,
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus,
+        .input-group select:focus {
+            border-color: #4facfe;
+        }
+
+        .input-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(79, 172, 254, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border-left: 3px solid #4facfe;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4facfe;
+            border: 3px solid #0f2027;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: #4facfe;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .timeline-actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.8rem;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-overlay.hidden {
+            display: none;
+        }
+
+        .modal {
+            background: #0f2027;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4facfe;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .feedback {
+            padding: 12px;
+            border-radius: 10px;
+            margin: 16px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .feedback.success {
+            background: rgba(67, 233, 123, 0.1);
+            border: 1px solid rgba(67, 233, 123, 0.3);
+            color: #43e97b;
+        }
+
+        .feedback.error {
+            background: rgba(255, 100, 100, 0.1);
+            border: 1px solid rgba(255, 100, 100, 0.3);
+            color: #ff6464;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .stations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Modal Preventivo -->
+    <div id="preventivoModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>📅 Registrar Preventivo</h3>
+            <div class="input-group">
+                <label>Fecha del Preventivo</label>
+                <input type="date" id="preventivoFecha">
+            </div>
+            <div class="input-group">
+                <label>Novedades</label>
+                <textarea id="preventivoNovedades" placeholder="Describe las actividades realizadas..."></textarea>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="savePreventivoBtn" class="btn btn-success" style="flex: 1;">Guardar</button>
+                <button id="cancelPreventivoBtn" class="btn btn-danger" style="flex: 1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Correctivo -->
+    <div id="correctivoModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>🔧 Registrar Correctivo</h3>
+            <div class="input-group">
+                <label>Fecha del Correctivo</label>
+                <input type="date" id="correctivoFecha">
+            </div>
+            <div class="input-group">
+                <label>Clase de Correctivo</label>
+                <select id="correctivoClase">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="Fuga de agua">Fuga de agua</option>
+                    <option value="Problema eléctrico">Problema eléctrico</option>
+                    <option value="Filtro obstruido">Filtro obstruido</option>
+                    <option value="Bomba dañada">Bomba dañada</option>
+                    <option value="Sensor defectuoso">Sensor defectuoso</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Novedades del Correctivo</label>
+                <textarea id="correctivoNovedades" placeholder="Describe el problema y la solución..."></textarea>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="saveCorrectivoBtn" class="btn btn-success" style="flex: 1;">Guardar</button>
+                <button id="cancelCorrectivoBtn" class="btn btn-danger" style="flex: 1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Suministro -->
+    <div id="suministroModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>📦 Registrar Suministro</h3>
+            <div class="input-group">
+                <label>Fecha del Suministro</label>
+                <input type="date" id="suministroFecha">
+            </div>
+            <div class="input-group">
+                <label>Accesorio/Insumo</label>
+                <select id="suministroAccesorio">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="Micro filtro de alimentación">Micro filtro de alimentación</option>
+                    <option value="Carbón Block">Carbón Block</option>
+                    <option value="LC141 (pack de resina)">LC141 (pack de resina)</option>
+                    <option value="LC174 (pack de resina)">LC174 (pack de resina)</option>
+                    <option value="CT3">CT3</option>
+                    <option value="Otro">Otro (especificar en observaciones)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Cantidad</label>
+                <input type="number" id="suministroCantidad" min="1" value="1">
+            </div>
+            <div class="input-group">
+                <label>Observaciones</label>
+                <textarea id="suministroObservaciones" placeholder="Detalles adicionales..."></textarea>
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="saveSuministroBtn" class="btn btn-success" style="flex: 1;">Guardar</button>
+                <button id="cancelSuministroBtn" class="btn btn-danger" style="flex: 1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Certificado (Cámara) -->
+    <div id="certificadoModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>📸 Registrar Certificado Mensual</h3>
+            <div class="input-group">
+                <label>Fecha del Certificado</label>
+                <input type="date" id="certFecha">
+            </div>
+            
+            <div class="input-group">
+                <label>📷 Captura de Foto</label>
+                <div id="certCameraContainer" class="hidden" style="margin-bottom:10px;">
+                    <video id="certVideo" autoplay playsinline style="width:100%; max-height:250px; object-fit:cover; border-radius:12px; border:2px solid #4facfe;"></video>
+                </div>
+                <img id="certCapturedImg" class="hidden" style="width:100%; max-height:250px; object-fit:contain; border-radius:12px; border:2px solid #43e97b; margin-bottom:10px;">
+                
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                    <button id="startCertCameraBtn" class="btn btn-secondary">📷 Abrir Cámara</button>
+                    <button id="captureCertBtn" class="btn btn-primary hidden">📸 Capturar</button>
+                    <button id="retakeCertBtn" class="btn btn-secondary hidden">🔄 Otra Foto</button>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button id="saveCertBtn" class="btn btn-success" style="flex: 1;">Guardar</button>
+                <button id="cancelCertBtn" class="btn btn-danger" style="flex: 1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Visor de Imagen -->
+    <div id="imageViewerModal" class="modal-overlay hidden" style="background: rgba(0,0,0,0.95);">
+        <div id="closeImageViewer" style="position: absolute; top: 20px; right: 20px; font-size: 2.5rem; color: #fff; cursor: pointer; z-index: 1001; line-height: 1;">&times;</div>
+        <img id="fullSizeImage" src="" style="max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 50px rgba(79, 172, 254, 0.3);">
+    </div>
+
+    <div class="container">
+        <h1>💧 Gestión de Estaciones de Agua</h1>
+        <p class="subtitle">Control de preventivos, correctivos y suministros</p>
+
+        <!-- Tarjetas de Estaciones -->
+        <div class="stations-grid" id="stationsGrid"></div>
+
+        <!-- Panel de Gestión -->
+        <div id="managementPanel" class="hidden">
+            <div class="card">
+                <h2>
+                    <span id="currentStationTitle"></span>
+                </h2>
+
+                <div class="tabs">
+                    <button class="tab active" data-tab="preventivos">📅 Preventivos</button>
+                    <button class="tab" data-tab="correctivos">🔧 Correctivos</button>
+                    <button class="tab" data-tab="suministros">📦 Suministros</button>
+                    <button class="tab" data-tab="certificados">📜 Certificados</button>
+                </div>
+
+                <!-- Tab Preventivos -->
+                <div class="tab-content active" id="preventivos-content">
+                    <button id="addPreventivoBtn" class="btn btn-primary">➕ Nuevo Preventivo</button>
+                    <div id="preventivosList" class="timeline"></div>
+                </div>
+
+                <!-- Tab Correctivos -->
+                <div class="tab-content" id="correctivos-content">
+                    <button id="addCorrectivoBtn" class="btn btn-primary">➕ Nuevo Correctivo</button>
+                    <div id="correctivosList" class="timeline"></div>
+                </div>
+
+                <!-- Tab Suministros -->
+                <div class="tab-content" id="suministros-content">
+                    <button id="addSuministroBtn" class="btn btn-primary">➕ Nuevo Suministro</button>
+                    <div id="suministrosList" class="timeline"></div>
+                </div>
+
+                <!-- Tab Certificados -->
+                <div class="tab-content" id="certificados-content">
+                    <button id="addCertBtn" class="btn btn-primary">➕ Nuevo Certificado</button>
+                    <div id="certificadosList" class="timeline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="estaciones-agua.js"></script>
+</body>
+
+</html>
