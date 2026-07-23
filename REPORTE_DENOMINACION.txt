@@ -1,0 +1,59 @@
+
+REPORTE DE COMPLETADO DE DENOMINACIONES
+========================================
+
+Archivos utilizados:
+- Principal: Pipetas Generales SWISSMEDICAL 19.06.2026 - ACTUALIZADO_FINAL 2.xlsx
+- SAP (no en sistema): sap.xlsx
+- SAP2 (en sistema): sap2.xlsx
+
+Lógica aplicada:
+- Se identificaron 103 seriales que SÍ están en SAP2
+- Se creó un mapeo de 30 magnitudes -> Denomin.tipo desde sap.xlsx
+- Se completó el campo "Denomin.tipo" para seriales que NO están en SAP2
+
+RESULTADOS:
+Total de Denomin.tipo completados: 163
+
+Detalle por hoja:
+  - BACKUP SWISS 112: 5 completados
+  - BACKUP CMA: 6 completados
+  - CAT 61 - 1: 47 completados
+  - CLO 17: 17 completados
+  - DLA 32 - 2: 29 completados
+  - CyMSA 23: 20 completados
+  -  NDT 14: 14 completados
+  - ZABALA 14: 12 completados
+  - AGO 18: 13 completados
+
+MAPEO UTILIZADO (Magnitud -> Denomin.tipo):
+  0.5-10 uL = 0.5-10 uL
+  1-10 mL = 1-10 mL
+  1-10 uL = 5-50 uL
+  1.10 = 1.10
+  10 - 100 ul = 10 - 100 ul
+  10-100 uL = 10-100 uL
+  10-100UL = 10-100UL
+  10-500-5000 uL = 10-500-5000 uL
+  10.100 = 10.100
+  100 uL = 100 uL
+  100-1000 uL = 100-1000 uL
+  100.1 = 100.1000
+  100.1000 = 100.1000
+  101.1000 = 101.1000
+  12 x 20-200 uL = 12 x 20-200 uL
+  2-10 mL = 2-10 mL
+  2-20 uL = 2-20 uL
+  20-200 = 20-200
+  20-200 uL = 20-200 uL
+  5-50 uL = 5-50 uL
+  5.50 = 5.50
+  50 uL = 50 uL
+  8 X 5-50 uL = 8 X 5-50 uL
+  8 X 50-300 uL = 8 X 50-300 uL
+  8 x 10-100 uL = 8 x 10-100 uL
+  8 x 20-200 uL = 8 x 20-200 uL
+  8 x 40-350 uL = 8 x 40-350 uL
+  8 x 5-50 uL = 8 x 5-50 uL
+  8 x 50-300 uL = 8 x 50-300 uL
+  STEPPER 10-5000 uL = STEPPER 10-5000 uL

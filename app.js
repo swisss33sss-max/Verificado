@@ -517,42 +517,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         globalAllSheetsHeaders[sheetName] = validHeaders;
 
                         // 2. Limpiar datos: eliminar filas donde todos los valores en las columnas válidas sean vacíos
-                        // También filtrar filas de separador de sector (las que exporta este mismo sistema)
-                        const serieHeader = validHeaders.find(h => {
-                            const hn = h.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-                            return hn.includes('serie') || hn.includes('serial');
-                        });
                         const cleanedData = rawSheetData.filter(row => {
-                            // Si la fila no tiene ningún dato en columnas válidas, la saltamos
-                            const hasAnyData = validHeaders.some(h => {
+                            return validHeaders.some(h => {
                                 const val = row[h];
                                 return val !== "" && val !== null && val !== undefined;
                             });
-                            if (!hasAnyData) return false;
-
-                            // Filtrar filas de grupo/separador exportadas por el sistema
-                            // Esas filas tienen la columna de serie vacía pero tienen texto en la primera columna
-                            if (serieHeader && (row[serieHeader] === '' || row[serieHeader] == null)) {
-                                // Verificar si la mayoría de columnas están vacías (es una fila separadora)
-                                const filledCols = validHeaders.filter(h => row[h] !== '' && row[h] != null).length;
-                                if (filledCols <= 2) return false; // saltar fila separadora
-                            }
-                            return true;
                         });
 
-                        // 3. Inyectar columnas obligatorias que el sistema gestiona (si no están en el Excel)
-                        const mandatoryColumns = [
-                            { key: 'Verificado',      default: '' },
-                            { key: 'Observaciones',   default: '' }
-                        ];
-                        mandatoryColumns.forEach(({ key, default: def }) => {
-                            if (!validHeaders.includes(key)) {
-                                validHeaders.push(key);
-                                cleanedData.forEach(row => { row[key] = row[key] ?? def; });
-                            }
-                        });
-
-                        globalAllSheetsHeaders[sheetName] = validHeaders;
                         globalAllSheetsData[sheetName] = cleanedData;
                     } else {
                         globalAllSheetsHeaders[sheetName] = [];
@@ -640,7 +611,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Agregar cada hoja al nuevo libro
             globalSheetNames.forEach(sheetName => {
-                const sheetData = globalAllSheetsData[sheetName] || [];
+                let sheetData = globalAllSheetsData[sheetName] || [];
+                
+                // AGREGAR COLUMNAS DINÁMICAS SI NO EXISTEN
+                // Si alguna fila tiene nuevas propiedades que no están en las columnas originales,
+                // agregarlas automáticamente
+                if (sheetData.length > 0) {
+                    // Obtener todas las claves únicas de todas las filas
+                    const allKeys = new Set();
+                    sheetData.forEach(row => {
+                        Object.keys(row).forEach(key => allKeys.add(key));
+                    });
+                    
+                    // Asegurar que todas las filas tengan todas las columnas (agregar vacías si faltan)
+                    sheetData = sheetData.map(row => {
+                        const completeRow = {};
+                        allKeys.forEach(key => {
+                            completeRow[key] = row[key] !== undefined ? row[key] : '';
+                        });
+                        return completeRow;
+                    });
+                }
+                
                 const newSheet = XLSX.utils.json_to_sheet(sheetData);
                 XLSX.utils.book_append_sheet(newWb, newSheet, sheetName);
             });
@@ -653,7 +645,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fileName = fileName.replace(/[\\\/:*?"<>|]/g, "_");
 
             XLSX.writeFile(newWb, `${fileName}.xlsx`);
-            console.log("Exportación multi-hoja completada:", fileName);
+            console.log("Exportación multi-hoja completada con columnas dinámicas:", fileName);
         } catch (err) {
             console.error(err);
             alert("Error al exportar.");
@@ -662,43 +654,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- HELPERS ---
     function getColumnKey(name) {
-        if (!globalHeaders || globalHeaders.length === 0) return null;
-        const normalize = str => String(str || '').toLowerCase()
-            .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        // Normalizar: quitar tildes y convertir a minúsculas
+        const normalize = str => str.toLowerCase()
+            .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Quita tildes
 
         const searchTerm = normalize(name);
 
-        // Intento 1: Coincidencia exacta
-        let found = globalHeaders.find(h => normalize(h) === searchTerm);
-        if (found) return found;
-
-        // Intento 2: La columna CONTIENE el searchTerm
-        found = globalHeaders.find(h => normalize(h).includes(searchTerm));
-        if (found) return found;
-
-        // Intento 3: Alias comunes (sin ambigüedades)
-        const aliases = {
-            'equipo':      ['equiposap', 'id sap', 'id equipo'],
-            'serie':       ['nº serie', 'n serie', 'n° serie', 'nro serie', 'serial', 'n/s'],
-            'modelo':      ['marca y modelo', 'marca', 'modelo', 'descripcion'],
-            'rango':       ['rango (volumen)', 'volumen', 'capacidad'],
-            'ubicacion':   ['ubicacion tecnica', 'loc tecnica', 'laboratorio', 'sede'],
-            'calibracion': ['ultima calib', 'ultima cal', 'calib', 'fecha calibracion', 'ultima', 'fecha'],
-            'vencimiento': ['proxima cal', 'proxima', 'vence'],
-            'status':      ['estado', 'estatus', 'vigencia'],
-            'observacion': ['obs', 'nota', 'comentario']
-        };
-
-        for (const [key, list] of Object.entries(aliases)) {
-            if (searchTerm.includes(key) || key.includes(searchTerm)) {
-                for (const alias of list) {
-                    found = globalHeaders.find(h => normalize(h).includes(alias));
-                    if (found) return found;
-                }
-            }
-        }
-
-        return null;
+        return globalHeaders.find(h => normalize(h).includes(searchTerm)) || null;
     }
 
     function formatDate(val) {
@@ -709,6 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return val;
     }
+
     function formatDateForInput(val) {
         if (!val) return "";
         let d = val instanceof Date ? val : new Date(val);
@@ -724,144 +687,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (globalDataRaw.length === 0) return;
 
-        const normalize = s => String(s || '').trim().toUpperCase();
-        const filterSerieNorm = normalize(filterSerieValue);
-
-        // Definir Columnas Estándar en el orden pedido
-        const standardHeaders = [
-            'Verificado',
-            '#',
-            'UBICACIÓN TÉCNICA',
-            'SECTOR',
-            'N° SERIE',
-            'MARCA Y MODELO',
-            'RANGO (VOLUMEN)',
-            'ÚLTIMA CALIBRACIÓN',
-            'VENCIMIENTO',
-            'OBSERVACIONES',
-            'STATUS'
-        ];
-
-        // Mapeo de llaves de datos
-        const keyMap = {
-            'SECTOR': getColumnKey('SECTOR') || getColumnKey('SAP') || getColumnKey('CODIGO'),
-            'N° SERIE': getColumnKey('serie'),
-            'MARCA Y MODELO': getColumnKey('modelo'),
-            'RANGO (VOLUMEN)': getColumnKey('rango'),
-            'UBICACIÓN TÉCNICA': getColumnKey('ubicacion') || getColumnKey('tecnica'),
-            'ÚLTIMA CALIBRACIÓN': getColumnKey('calibracion'),
-            'VENCIMIENTO': getColumnKey('vencimiento'),
-            'STATUS': getColumnKey('status'),
-            'OBSERVACIONES': getColumnKey('observacion')
-        };
-
-        // Columnas extra del Excel que no están ya en standardHeaders (ni mapeadas, ni 'Inventario')
-        const mappedValues = Object.values(keyMap).filter(Boolean);
-        const standardNormalized = standardHeaders.map(h => normalize(h));
-        const extraHeaders = globalHeaders.filter(h => {
-            const normH = normalize(h);
-            return !mappedValues.includes(h)
-                && !standardNormalized.includes(normH)
-                && !normH.includes('INVENTARIO');
-        });
-
-        // Renderizar Headers: estándar (sin STATUS) + extras + STATUS al final
         const headerRow = document.createElement('tr');
-        standardHeaders.filter(h => h !== 'STATUS').forEach(h => {
+        globalHeaders.forEach(h => {
             const th = document.createElement('th');
             th.textContent = h;
             headerRow.appendChild(th);
         });
-        extraHeaders.forEach(h => {
-            const th = document.createElement('th');
-            th.textContent = h;
-            headerRow.appendChild(th);
-        });
-        // STATUS siempre al final
-        const thStatus = document.createElement('th');
-        thStatus.textContent = 'STATUS';
-        headerRow.appendChild(thStatus);
         thead.appendChild(headerRow);
 
-        // Agrupar y ordenar por ubicación preservando el índice original
-        const locKey = keyMap['UBICACIÓN TÉCNICA'];
-        const sortedData = globalDataRaw.map((row, index) => ({ ...row, _originalIndex: index }))
-            .sort((a, b) => {
-                const locA = normalize(a[locKey]);
-                const locB = normalize(b[locKey]);
-                return locA.localeCompare(locB);
-            });
+        const serieKey = getColumnKey('serie');
+        const magnitudKey = getColumnKey('magnitud');
+        const normalize = s => String(s || '').trim().toUpperCase();
+        const filterSerieNorm = normalize(filterSerieValue);
+        const filterMagnitudNorm = normalize(filterMagnitudValue);
 
-        let currentUbicacion = null;
-        let count = 0;
-
-        sortedData.forEach((row, index) => {
-            const valSerie = normalize(row[keyMap['N° SERIE']]);
-            const valUbicacion = normalize(row[locKey]);
-
-            // Filtrado (solo serie por ahora para simplificar)
-            if (filterSerieNorm && !valSerie.includes(filterSerieNorm)) return;
-
-            // Header de Sector/Ubicación
-            if (valUbicacion !== currentUbicacion && valUbicacion) {
-                currentUbicacion = valUbicacion;
-                const sectorRow = document.createElement('tr');
-                sectorRow.className = 'sector-header';
-                const colSpan = standardHeaders.length + extraHeaders.length;
-                sectorRow.innerHTML = `<td colspan="${colSpan}" style="background: rgba(0, 217, 255, 0.1); color: #00d9ff; font-weight: 700; padding: 10px 15px;">📍 ${valUbicacion}</td>`;
-                tbody.appendChild(sectorRow);
+        globalDataRaw.forEach((row, index) => {
+            // Filtrar por serie
+            if (filterSerieValue && serieKey) {
+                const serieVal = normalize(row[serieKey]);
+                if (!serieVal.includes(filterSerieNorm)) return;
             }
 
-            count++;
+            // Filtrar por magnitud
+            if (filterMagnitudValue && magnitudKey) {
+                const magnitudVal = normalize(row[magnitudKey]);
+                if (!magnitudVal.includes(filterMagnitudNorm)) return;
+            }
+
             const tr = document.createElement('tr');
-            tr.onclick = () => openEditFromTable(row._originalIndex);
             tr.style.cursor = 'pointer';
+            tr.addEventListener('click', () => openEditFromTable(index));
 
-            // Columnas Estándar (excepto STATUS que va al final)
-            standardHeaders.filter(h => h !== 'STATUS').forEach(header => {
+            globalHeaders.forEach(h => {
                 const td = document.createElement('td');
-                
-                if (header === 'Verificado') {
-                    td.innerHTML = row['Verificado'] === '✅' ? '<span style="color: #00ff88; font-weight: bold;">✅ OK</span>' : '<span style="color: rgba(255,255,255,0.2);">---</span>';
-                    td.style.textAlign = 'center';
-                } else if (header === '#') {
-                    td.textContent = count;
-                    td.style.color = '#666';
-                } else {
-                    const key = keyMap[header];
-                    let val = key ? row[key] : '';
-                    
-                    if (header.includes('CALIBRACIÓN') || header.includes('VENCIMIENTO')) {
-                        val = formatDate(val);
-                    }
-                    
-                    td.textContent = val || '---';
-                }
+                let val = row[h];
+                if (val instanceof Date) val = formatDate(val);
+                td.textContent = val !== undefined && val !== null ? val : '';
                 tr.appendChild(td);
             });
-
-            // Columnas Extra
-            extraHeaders.forEach(h => {
-                const td = document.createElement('td');
-                td.textContent = row[h] || '---';
-                tr.appendChild(td);
-            });
-
-            // STATUS al final
-            const tdStatus = document.createElement('td');
-            const statusKey = keyMap['STATUS'];
-            const statusVal = statusKey ? (row[statusKey] || 'Vigente') : 'Vigente';
-            const badgeClass = statusVal.toLowerCase().includes('baja') ? 'badge-danger' : 
-                              statusVal.toLowerCase().includes('vencido') ? 'badge-warning' : 'badge-success';
-            tdStatus.innerHTML = `<span class="badge ${badgeClass}">${statusVal}</span>`;
-            tr.appendChild(tdStatus);
-
             tbody.appendChild(tr);
         });
-
-        if (count === 0) {
-            tbody.innerHTML = `<tr><td colspan="${standardHeaders.length + extraHeaders.length}" style="text-align:center; padding:40px; color:#666;">No se encontraron resultados</td></tr>`;
-        }
     }
 
     // Abrir edición desde la tabla
@@ -1793,14 +1658,6 @@ document.addEventListener('DOMContentLoaded', () => {
             globalDataRaw[currentMatchIndex][locKey] = newLoc;
         }
 
-        // Marcar como verificado automáticamente al actualizar
-        const verifiedCol = 'Verificado';
-        if (!globalHeaders.includes(verifiedCol)) {
-            globalHeaders.push(verifiedCol);
-            globalDataRaw.forEach(r => { if (!(verifiedCol in r)) r[verifiedCol] = ''; });
-        }
-        globalDataRaw[currentMatchIndex][verifiedCol] = '✅';
-
         // Guardar todas las observaciones
         const obsCols = getObsColumns();
 
@@ -1822,11 +1679,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Guardar en IndexedDB automáticamente
         await saveExcelToDB();
 
-        alert(`✅ Actualizado y Verificado (fila ${currentMatchIndex + 2})`);
+        alert(`✅ Actualizado (fila ${currentMatchIndex + 2})`);
         editPanel.classList.add('hidden');
         scanResult.classList.add('hidden');
 
-        // Mantener el filtro actual y re-renderizar
+        // Mantener el filtro actual
         const filterInput = document.getElementById('filterSerieInput');
         renderTable(filterInput ? filterInput.value : '');
     });
