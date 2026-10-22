@@ -1,0 +1,920 @@
+{
+  "generado": "2026-10-22T17:42:21",
+  "fuente": "GENERAL",
+  "clinicas": {
+    "AGO": [
+      {
+        "serie": "10061084",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "10061084-260827.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "18071824",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "18071824-260826.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "25111202",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "25111202-260806.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "26121117",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "05/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "26121117-260805.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "27021158",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "10/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Dispensador",
+        "archivo": "27021158-260710(1).pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "27061093",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "15/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "",
+        "archivo": "27061093-260715(2).pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "27121128",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121128-260806.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "27121270",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "04/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121270-260804.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "27121271",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121271-260826.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "32011282",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "10/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Dispensador",
+        "archivo": "32011282-260710(1).pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "32041782",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32041782-260806.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "33041815",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "10/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "33041815-260710(1).pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "B632872940",
+        "magnitud": "20 a 300 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "B632872940-260827.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "E1468891U",
+        "magnitud": "20 a 300 µL",
+        "fecha_calibracion": "04/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "",
+        "archivo": "E1468891U-260804.pdf",
+        "clinica": "AGO"
+      },
+      {
+        "serie": "FJ25770",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "10/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "FJ25770-260710(1).pdf",
+        "clinica": "AGO"
+      }
+    ],
+    "CATALINAS": [
+      {
+        "serie": "21121458",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "21121458-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26091766",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "11/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26091766-260811.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26091790",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "11/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26091790-260811.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26091800",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26091800-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26101956",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26101956-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26101959",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26101959-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "26101960",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26101960-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "31112706",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "31112706-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "32061142",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061142-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "32061239",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061239-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "32061296",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061296-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "340442293",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442293-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "356642413",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "356642413-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "KJ27085",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "KJ27085-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "SJ17044",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "SJ17044-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "SJ17055",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "SJ17055-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "VH23665",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "VH23665-260812.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "VH23671",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "",
+        "fecha_vencimiento": "06/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "VH23671-260629.pdf",
+        "clinica": "CATALINAS"
+      },
+      {
+        "serie": "WH05621",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "12/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "WH05621-260812.pdf",
+        "clinica": "CATALINAS"
+      }
+    ],
+    "CLO": [
+      {
+        "serie": "26022583",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26022583-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "26092302",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26092302-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "27021182",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "18/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Dispensador",
+        "archivo": "27021182-260918.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "28041420",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "28041420-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "29072081",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "29072081-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "32031165",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32031165-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "32061253",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061253-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "32061297",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061297-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "33041678",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "10/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "33041678-260910.pdf",
+        "clinica": "CLO"
+      },
+      {
+        "serie": "4306002",
+        "magnitud": "2000 a 10000 µL",
+        "fecha_calibracion": "18/09/2026",
+        "fecha_vencimiento": "09/2027",
+        "objeto": "Dispensador",
+        "archivo": "4306002-260918.pdf",
+        "clinica": "CLO"
+      }
+    ],
+    "CyMSA": [
+      {
+        "serie": "22041704",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "20/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "22041704-260820.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "26081671",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "20/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26081671-260820.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "27011095",
+        "magnitud": "1 a 10 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27011095-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "27121273",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121273-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "29071534",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "20/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "29071534-260820.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "32032980",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "20/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32032980-260820.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "32061258",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061258-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "340442259",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442259-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "DH43750",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "DH43750-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "EN37539",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "EN37539-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "GH88031",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "GH88031-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "JH45331",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "20/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "JH45331-260820.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "KH38285",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "KH38285-260821.pdf",
+        "clinica": "CyMSA"
+      },
+      {
+        "serie": "SJ19758",
+        "magnitud": "2 a 20 µL",
+        "fecha_calibracion": "21/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "SJ19758-260821.pdf",
+        "clinica": "CyMSA"
+      }
+    ],
+    "DLA": [
+      {
+        "serie": "10061090",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "10061090-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "16042791",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "16042791-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "23111349",
+        "magnitud": "2 a 20 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "23111349-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "26081504",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26081504-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "26081670",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26081670-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "26091769",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26091769-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "26091789",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26091789-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "26092383",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "26092383-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27021184",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "27021184-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27021229",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "05/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "27021229-260805.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27061172",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27061172-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27061179",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27061179-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27061181",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27061181-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27121877",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121877-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "27121884",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "27121884-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "32032637",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32032637-260827.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "32032961",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32032961-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "32061883",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "32061883-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "340442093",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "05/10/2026",
+        "fecha_vencimiento": "10/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442093-261005.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "540440004",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "04/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "540440004-260804.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "6121897",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "06/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "6121897-260806.pdf",
+        "clinica": "DLA"
+      },
+      {
+        "serie": "CK01087",
+        "magnitud": "",
+        "fecha_calibracion": "04/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "CK01087-260804.pdf",
+        "clinica": "DLA"
+      }
+    ],
+    "NDT": [
+      {
+        "serie": "28111269",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "27/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Dispensador",
+        "archivo": "28111269-260827.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "33041080",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "33041080-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "33051676",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "33051676-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "33051689",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "33051689-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34071308",
+        "magnitud": "5 a 50 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34071308-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34081011",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Dispensador",
+        "archivo": "34081011-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34091185",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34091185-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34091186",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34091186-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34091187",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34091187-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34091730",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34091730-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34091738",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "26/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34091738-260826.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34101082",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34101082-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34101089",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "34101089-260731.pdf",
+        "clinica": "NDT"
+      },
+      {
+        "serie": "34111097",
+        "magnitud": "1000 a 10000 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Dispensador",
+        "archivo": "34111097-260731.pdf",
+        "clinica": "NDT"
+      }
+    ],
+    "ZABALA": [
+      {
+        "serie": "20101534",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "13/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "20101534-260813.pdf",
+        "clinica": "ZABALA"
+      },
+      {
+        "serie": "340442028",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "31/07/2026",
+        "fecha_vencimiento": "07/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442028-260731.pdf",
+        "clinica": "ZABALA"
+      },
+      {
+        "serie": "340442284",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "13/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442284-260813.pdf",
+        "clinica": "ZABALA"
+      },
+      {
+        "serie": "340442287",
+        "magnitud": "10 a 100 µL",
+        "fecha_calibracion": "13/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "340442287-260813.pdf",
+        "clinica": "ZABALA"
+      },
+      {
+        "serie": "640461091",
+        "magnitud": "100 a 1000 µL",
+        "fecha_calibracion": "13/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "640461091-260813.pdf",
+        "clinica": "ZABALA"
+      },
+      {
+        "serie": "FJ25774",
+        "magnitud": "20 a 200 µL",
+        "fecha_calibracion": "13/08/2026",
+        "fecha_vencimiento": "08/2027",
+        "objeto": "Micropipeta Monocanal",
+        "archivo": "FJ25774-260813.pdf",
+        "clinica": "ZABALA"
+      }
+    ]
+  }
+}
