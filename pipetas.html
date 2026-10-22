@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipetas Generales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { text-align: center; color: #888; margin-bottom: 24px; font-size: 0.9rem; }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card h2 { font-size: 1.1rem; margin-bottom: 16px; color: #00d9ff; }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary { background: linear-gradient(135deg, #00d9ff, #00ff88); color: #000; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(0, 217, 255, 0.3); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .btn-success { background: linear-gradient(135deg, #00ff88, #00d9ff); color: #000; }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.2); }
+
+        .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .action-btn {
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .action-btn:hover { transform: translateY(-3px); border-color: #00d9ff; }
+        .action-btn.disabled { opacity: 0.4; cursor: not-allowed; transform: none !important; }
+        .action-btn .icon { font-size: 2rem; margin-bottom: 8px; }
+        .action-btn .label { font-size: 0.85rem; color: #ccc; }
+
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; margin-bottom: 6px; color: #aaa; font-size: 0.85rem; }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            background: rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus, .input-group select:focus { border-color: #00d9ff; }
+
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .feedback { padding: 12px; border-radius: 10px; margin: 16px 0; text-align: center; font-weight: 500; }
+        .feedback.success { background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.3); color: #00ff88; }
+        .feedback.error { background: rgba(255,100,100,0.1); border: 1px solid rgba(255,100,100,0.3); color: #ff6464; }
+        .feedback.warning { background: rgba(255,200,0,0.1); border: 1px solid rgba(255,200,0,0.3); color: #ffc800; }
+
+        .table-container { overflow-x: auto; max-height: 460px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.05); white-space: nowrap; }
+        th { background: rgba(0,0,0,0.3); color: #00d9ff; font-weight: 600; position: sticky; top: 0; }
+        tr:hover td { background: rgba(255,255,255,0.03); }
+
+        .badge { padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+        .badge-ok { background: rgba(0,255,136,0.15); color: #00ff88; }
+        .badge-warn { background: rgba(255,200,0,0.15); color: #ffc800; }
+        .badge-exp { background: rgba(255,100,100,0.15); color: #ff6464; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 10px; margin-bottom: 16px; }
+        .stat-box { text-align: center; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 10px; }
+        .stat-box .num { font-size: 1.4rem; font-weight: 700; color: #00d9ff; }
+        .stat-box .lbl { font-size: 0.7rem; color: #888; margin-top: 2px; }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; padding: 20px;
+        }
+        .modal-overlay.hidden { display: none; }
+        .modal { background: #1a1a2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; width: 100%; max-width: 440px; }
+        .modal h3 { text-align: center; margin-bottom: 20px; color: #00ff88; }
+
+        .suggestions-list {
+            position: absolute; background: #1a1a2e;
+            border: 1px solid rgba(0,217,255,0.3); border-radius: 10px;
+            width: 100%; max-height: 200px; overflow-y: auto; z-index: 1001;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .suggestion-item:hover { background: rgba(0,217,255,0.1); }
+        .suggestion-item strong { color: #00d9ff; }
+        .suggestion-item small { color: #888; display: block; font-size: 0.75rem; }
+
+        .hidden { display: none !important; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+
+        @media (max-width: 600px) {
+            .btn-row { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            .grid-2-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <h1>🧪 Pipetas Generales</h1>
+            <a href="index.html" class="btn btn-secondary" style="text-decoration:none;">← Volver</a>
+        </div>
+        <p class="subtitle">Verificación y control de calibración por clínica</p>
+
+        <!-- Selector principal -->
+        <div class="card">
+            <h2>📋 Selector</h2>
+            <div class="grid-2-col">
+                <div class="input-group" style="margin-bottom:0;">
+                    <label>Tipo de inventario</label>
+                    <select id="tipoSelect">
+                        <option value="clinica">Pipetas Generales por Clínica</option>
+                    </select>
+                </div>
+                <div class="input-group" style="margin-bottom:0;">
+                    <label>Clínica</label>
+                    <select id="clinicaSelect">
+                        <option value="">-- Seleccionar Clínica --</option>
+                    </select>
+                </div>
+            </div>
+            <div id="dbInfo" style="margin-top:12px; font-size:0.8rem; color:#888;"></div>
+        </div>
+
+        <!-- Acciones -->
+        <div class="card" id="actionsCard">
+            <h2>🔧 Acciones</h2>
+            <div class="actions-grid">
+                <div id="verifySerieBtn" class="action-btn disabled">
+                    <div class="icon">🔍</div>
+                    <div class="label">Verificar por Serie</div>
+                </div>
+                <div id="registerSerieBtn" class="action-btn disabled">
+                    <div class="icon">📝</div>
+                    <div class="label">Registrar / Editar</div>
+                </div>
+            </div>
+            <div id="actionFeedback" class="feedback hidden"></div>
+        </div>
+
+        <!-- Importar / Exportar -->
+        <div class="card">
+            <h2>💾 Importar / Exportar Excel</h2>
+            <div class="input-group" style="margin-bottom:12px;">
+                <label>📝 Nombre del archivo a exportar</label>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <input type="text" id="exportFileName" placeholder="Pipetas_Generales" style="flex:1;">
+                    <span style="color:#888; font-weight:500;">.xlsx</span>
+                </div>
+            </div>
+            <div class="btn-row">
+                <button id="exportBtn" class="btn btn-success">💾 Exportar Excel</button>
+                <label class="btn btn-secondary" style="cursor:pointer; margin:0;">
+                    📂 Importar Excel
+                    <input type="file" id="importInput" accept=".xlsx,.xls" style="display:none;">
+                </label>
+                <button id="resetBtn" class="btn btn-secondary" style="background:rgba(255,100,100,0.2); border-color:rgba(255,100,100,0.4);">🔄 Restaurar desde PDF</button>
+            </div>
+            <div id="ioFeedback" class="feedback hidden"></div>
+        </div>
+
+        <!-- Tabla -->
+        <div id="resultsArea" class="card hidden">
+            <h2>📊 Pipetas de la Clínica</h2>
+            <div class="stats-row" id="statsRow"></div>
+            <div class="grid-2-col" style="margin-bottom:16px;">
+                <div class="input-group" style="margin-bottom:0;">
+                    <label>🔍 Filtrar por Serie</label>
+                    <input type="text" id="filterSerieInput" placeholder="Serie..." style="text-transform:uppercase;">
+                </div>
+                <div class="input-group" style="margin-bottom:0;">
+                    <label>⚖️ Filtrar por Magnitud</label>
+                    <input type="text" id="filterMagnitudInput" placeholder="Magnitud...">
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="tableMain">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Verificar Serie -->
+    <div id="verifyModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3>🔍 Verificar por Serie</h3>
+            <div class="input-group" style="position:relative;">
+                <label>Número de Serie</label>
+                <input type="text" id="verifyInput" placeholder="Ej: KJ27085" style="text-transform:uppercase;" autocomplete="off">
+                <div id="verifySuggestions" class="suggestions-list hidden"></div>
+            </div>
+            <div id="verifyFeedback" class="feedback hidden"></div>
+            <div class="btn-row" style="margin-top:16px;">
+                <button id="confirmVerifyBtn" class="btn btn-success" style="flex:1;">Verificar</button>
+                <button id="cancelVerifyBtn" class="btn btn-secondary" style="flex:1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Registrar / Editar -->
+    <div id="editModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h3 id="editModalTitle">📝 Registrar / Editar Pipeta</h3>
+            <div class="input-group">
+                <label>Número de Serie</label>
+                <input type="text" id="editSerie" placeholder="Ej: KJ27085" style="text-transform:uppercase;">
+            </div>
+            <div class="input-group">
+                <label>Magnitud</label>
+                <input type="text" id="editMagnitud" placeholder="Ej: 100 a 1000 µL">
+            </div>
+            <div class="input-group">
+                <label>Fecha de Calibración</label>
+                <input type="date" id="editCalib">
+            </div>
+            <div class="input-group">
+                <label>Fecha de Vencimiento</label>
+                <input type="month" id="editVenc">
+            </div>
+            <div class="input-group">
+                <label>Modelo</label>
+                <input type="text" id="editModelo" placeholder="Opcional">
+            </div>
+            <div class="input-group">
+                <label>Observaciones</label>
+                <input type="text" id="editObs" placeholder="Opcional">
+            </div>
+            <div id="editFeedback" class="feedback hidden"></div>
+            <div class="btn-row" style="margin-top:16px;">
+                <button id="saveEditBtn" class="btn btn-success" style="flex:1;">Guardar</button>
+                <button id="cancelEditBtn" class="btn btn-secondary" style="flex:1;">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="pipetas_seed.js"></script>
+    <script src="pipetas.js"></script>
+</body>
+
+</html>
