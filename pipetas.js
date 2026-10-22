@@ -177,18 +177,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================================
     // SELECTOR DE CLÍNICA
     // =========================================================
+    const TODAS = '__ALL__';
+
     function poblarClinicas() {
         const cls = Object.keys(estado.clinicas).sort();
-        clinicaSelect.innerHTML = '<option value="">-- Seleccionar Clínica --</option>' +
-            cls.map(c => `<option value="${c}">${c} (${estado.clinicas[c].length})</option>`).join('');
+        const total = totalPipetas();
+        let html = '<option value="">-- Seleccionar Clínica --</option>';
+        if (cls.length) html += `<option value="${TODAS}">🏥 Todas las clínicas (${total})</option>`;
+        html += cls.map(c => `<option value="${c}">${c} (${estado.clinicas[c].length})</option>`).join('');
+        clinicaSelect.innerHTML = html;
     }
 
     clinicaSelect.addEventListener('change', () => {
         clinicaActual = clinicaSelect.value;
-        if (clinicaActual && estado.clinicas[clinicaActual]) {
+        const valido = clinicaActual === TODAS || (clinicaActual && estado.clinicas[clinicaActual]);
+        if (valido) {
             resultsArea.classList.remove('hidden');
             verifyBtn.classList.remove('disabled');
-            registerBtn.classList.remove('disabled');
+            // En modo "Todas" no se permite registrar nuevo (no se sabe la clínica destino)
+            if (clinicaActual === TODAS) registerBtn.classList.add('disabled');
+            else registerBtn.classList.remove('disabled');
             renderTabla(); renderStats();
         } else {
             resultsArea.classList.add('hidden');
@@ -234,7 +242,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // =========================================================
     // TABLA Y STATS
     // =========================================================
-    function listaActual() { return estado.clinicas[clinicaActual] || []; }
+    function esModoTodas() { return clinicaActual === TODAS; }
+
+    // Devuelve la lista de pipetas a mostrar. En modo "Todas" concatena todas
+    // las clínicas (los objetos son por referencia, así editar/verificar sobre
+    // ellos modifica directamente la clínica correspondiente).
+    function listaActual() {
+        if (esModoTodas()) {
+            const todas = [];
+            Object.keys(estado.clinicas).sort().forEach(cl => {
+                estado.clinicas[cl].forEach(p => { p.clinica = cl; todas.push(p); });
+            });
+            return todas;
+        }
+        return estado.clinicas[clinicaActual] || [];
+    }
 
     function renderStats() {
         const lista = listaActual();
@@ -255,7 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderTabla() {
         const thead = document.querySelector('#tableMain thead');
         const tbody = document.querySelector('#tableMain tbody');
-        thead.innerHTML = `<tr><th>Serie</th><th>Magnitud</th><th>Calibración</th><th>Vencimiento</th><th>Estado</th><th>Verificado</th><th>Modelo</th><th>Observaciones</th></tr>`;
+        const todas = esModoTodas();
+        thead.innerHTML = `<tr>${todas ? '<th>Clínica</th>' : ''}<th>Serie</th><th>Magnitud</th><th>Calibración</th><th>Vencimiento</th><th>Estado</th><th>Verificado</th><th>Modelo</th><th>Observaciones</th></tr>`;
         tbody.innerHTML = '';
         const fs = (filterSerieInput.value || '').trim().toUpperCase();
         const fm = (filterMagnitudInput.value || '').trim().toUpperCase();
@@ -267,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.style.cursor = 'pointer';
             tr.addEventListener('click', () => abrirEdicion(idx));
             tr.innerHTML = `
+                ${todas ? `<td><span class="badge" style="background:rgba(0,217,255,0.15);color:#00d9ff">${p.clinica || ''}</span></td>` : ''}
                 <td><strong>${p.serie || ''}</strong></td>
                 <td>${p.magnitud || ''}</td>
                 <td>${p.fecha_calibracion || ''}</td>
