@@ -13,8 +13,9 @@
         "clase": "Dispensador",
         "ubicacion": "",
         "observaciones": "",
-        "verificado": "",
-        "archivo": "10061084-260827.pdf"
+        "verificado": "✅",
+        "archivo": "10061084-260827.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "18071824",
@@ -27,7 +28,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "18071824-260826.pdf"
+        "archivo": "18071824-260826.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "25111202",
@@ -40,7 +42,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "25111202-260806.pdf"
+        "archivo": "25111202-260806.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "26121117",
@@ -53,7 +56,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26121117-260805.pdf"
+        "archivo": "26121117-260805.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "27021158",
@@ -66,7 +70,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27021158-260710(1).pdf"
+        "archivo": "27021158-260710(1).pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "27061093",
@@ -79,7 +84,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27061093-260715(2).pdf"
+        "archivo": "27061093-260715(2).pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "27121128",
@@ -92,7 +98,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121128-260806.pdf"
+        "archivo": "27121128-260806.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "27121270",
@@ -105,7 +112,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121270-260804.pdf"
+        "archivo": "27121270-260804.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "27121271",
@@ -118,7 +126,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121271-260826.pdf"
+        "archivo": "27121271-260826.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "32011282",
@@ -131,7 +140,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32011282-260710(1).pdf"
+        "archivo": "32011282-260710(1).pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "32041782",
@@ -144,7 +154,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32041782-260806.pdf"
+        "archivo": "32041782-260806.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "33041815",
@@ -157,7 +168,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041815-260710(1).pdf"
+        "archivo": "33041815-260710(1).pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "B632872940",
@@ -170,7 +182,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "B632872940-260827.pdf"
+        "archivo": "B632872940-260827.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "E1468891U",
@@ -183,7 +196,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "E1468891U-260804.pdf"
+        "archivo": "E1468891U-260804.pdf",
+        "clinica": "AGO"
       },
       {
         "serie": "FJ25770",
@@ -196,7 +210,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "FJ25770-260710(1).pdf"
+        "archivo": "FJ25770-260710(1).pdf",
+        "clinica": "AGO"
       }
     ],
     "BACKUP CMA": [
@@ -211,7 +226,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "✅",
-        "archivo": "10031135-260703(1).pdf"
+        "archivo": "10031135-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "11011180",
@@ -224,7 +240,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "11011180-260701(1).pdf"
+        "archivo": "11011180-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "14031595",
@@ -237,7 +254,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "14031595-260702(1).pdf"
+        "archivo": "14031595-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "15101944",
@@ -250,7 +268,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "15101944-260703(1).pdf"
+        "archivo": "15101944-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "16041151",
@@ -263,7 +282,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "16041151-260827.pdf"
+        "archivo": "16041151-260827.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "16061318",
@@ -276,7 +296,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "16061318-260702(1).pdf"
+        "archivo": "16061318-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "16062759",
@@ -289,7 +310,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "16062759-260811.pdf"
+        "archivo": "16062759-260811.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "18071834",
@@ -302,7 +324,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "18071834-260702(1).pdf"
+        "archivo": "18071834-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "19031031",
@@ -315,7 +338,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "19031031-260714(1).pdf"
+        "archivo": "19031031-260714(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "20081373",
@@ -328,7 +352,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "20081373-260811.pdf"
+        "archivo": "20081373-260811.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "21041029",
@@ -341,7 +366,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "21041029-260716(1).pdf"
+        "archivo": "21041029-260716(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "21041030",
@@ -354,7 +380,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "21041030-260720.pdf"
+        "archivo": "21041030-260720.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "22081641",
@@ -367,7 +394,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "22081641-260702(1).pdf"
+        "archivo": "22081641-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "22081642",
@@ -380,7 +408,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "22081642-260626.pdf"
+        "archivo": "22081642-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "22081646",
@@ -393,7 +422,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "22081646-260629.pdf"
+        "archivo": "22081646-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "22081650",
@@ -406,7 +436,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "22081650-260702(1).pdf"
+        "archivo": "22081650-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "23062334",
@@ -419,7 +450,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "23062334-260701(1).pdf"
+        "archivo": "23062334-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "25051557",
@@ -432,7 +464,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "25051557-260702(1).pdf"
+        "archivo": "25051557-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "25111235",
@@ -445,7 +478,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "25111235-260710(1).pdf"
+        "archivo": "25111235-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "256642112",
@@ -458,7 +492,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "256642112-260702(1).pdf"
+        "archivo": "256642112-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "26081026",
@@ -471,7 +506,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26081026-260721(1).pdf"
+        "archivo": "26081026-260721(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "26081556",
@@ -484,7 +520,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26081556-260701(1).pdf"
+        "archivo": "26081556-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "26091240",
@@ -497,7 +534,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091240-260702(1).pdf"
+        "archivo": "26091240-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "26091466",
@@ -510,7 +548,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091466-260626.pdf"
+        "archivo": "26091466-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "26091791",
@@ -523,7 +562,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091791-260703(1).pdf"
+        "archivo": "26091791-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "27051041",
@@ -536,7 +576,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27051041-260714(1).pdf"
+        "archivo": "27051041-260714(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "27051043",
@@ -549,7 +590,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27051043-260714(1).pdf"
+        "archivo": "27051043-260714(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "27061094",
@@ -562,7 +604,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27061094-260716.pdf"
+        "archivo": "27061094-260716.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "31091385",
@@ -575,7 +618,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "31091385-260702(1).pdf"
+        "archivo": "31091385-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "31112153",
@@ -588,7 +632,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "31112153-260703(1).pdf"
+        "archivo": "31112153-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "31112266",
@@ -601,7 +646,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "31112266-260703(1).pdf"
+        "archivo": "31112266-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "31112705",
@@ -614,7 +660,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "31112705-260626.pdf"
+        "archivo": "31112705-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32011061",
@@ -627,7 +674,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32011061-260721.pdf"
+        "archivo": "32011061-260721.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32011068",
@@ -640,7 +688,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32011068-260721(1).pdf"
+        "archivo": "32011068-260721(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32031017",
@@ -653,7 +702,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32031017-260714(1).pdf"
+        "archivo": "32031017-260714(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32031018",
@@ -666,7 +716,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32031018-260710(1).pdf"
+        "archivo": "32031018-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32031164",
@@ -679,7 +730,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32031164-260701(1).pdf"
+        "archivo": "32031164-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32061254",
@@ -692,7 +744,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061254-260626.pdf"
+        "archivo": "32061254-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "32061257",
@@ -705,7 +758,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061257-260702(1).pdf"
+        "archivo": "32061257-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "33041677",
@@ -718,7 +772,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041677-260710(1).pdf"
+        "archivo": "33041677-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "33041816",
@@ -731,7 +786,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041816-260703(1).pdf"
+        "archivo": "33041816-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "33041994",
@@ -744,7 +800,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041994-260703(1).pdf"
+        "archivo": "33041994-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "340442027",
@@ -757,7 +814,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442027-260626.pdf"
+        "archivo": "340442027-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "340442276",
@@ -770,7 +828,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442276-260702(1).pdf"
+        "archivo": "340442276-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "340442292",
@@ -783,7 +842,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442292-260702(1).pdf"
+        "archivo": "340442292-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "340442294",
@@ -796,7 +856,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442294-260702(1).pdf"
+        "archivo": "340442294-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "451220057",
@@ -809,7 +870,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "451220057-260715(1).pdf"
+        "archivo": "451220057-260715(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "6071221",
@@ -822,7 +884,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "6071221-260710(1).pdf"
+        "archivo": "6071221-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "79832118",
@@ -835,7 +898,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "79832118-260626.pdf"
+        "archivo": "79832118-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "A08004122",
@@ -848,7 +912,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "A08004122-260720(1).pdf"
+        "archivo": "A08004122-260720(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "CL17779",
@@ -861,7 +926,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "CL17779-260703(1).pdf"
+        "archivo": "CL17779-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "CL48409",
@@ -874,7 +940,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "CL48409-260701(1).pdf"
+        "archivo": "CL48409-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "CN54246",
@@ -887,7 +954,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "CN54246-260626.pdf"
+        "archivo": "CN54246-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "DH37040",
@@ -900,7 +968,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "DH37040-260720.pdf"
+        "archivo": "DH37040-260720.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "E06012031",
@@ -913,7 +982,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "E06012031-260701(1).pdf"
+        "archivo": "E06012031-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "E07006471",
@@ -926,7 +996,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "E07006471-260703(1).pdf"
+        "archivo": "E07006471-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "FJ14839",
@@ -939,7 +1010,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "FJ14839-260701(1).pdf"
+        "archivo": "FJ14839-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "FJ24909",
@@ -952,7 +1024,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "FJ24909-260701(1).pdf"
+        "archivo": "FJ24909-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "FJ25431",
@@ -965,7 +1038,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "FJ25431-260629.pdf"
+        "archivo": "FJ25431-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "GH77860",
@@ -978,7 +1052,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "GH77860-260702(1).pdf"
+        "archivo": "GH77860-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "H28930",
@@ -991,7 +1066,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "H28930-260629.pdf"
+        "archivo": "H28930-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "H53038722",
@@ -1004,7 +1080,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "H53038722-260626.pdf"
+        "archivo": "H53038722-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "H54002252",
@@ -1017,7 +1094,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "H54002252-260703(1).pdf"
+        "archivo": "H54002252-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "JH24840",
@@ -1030,7 +1108,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "JH24840-260710(1).pdf"
+        "archivo": "JH24840-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "JH28940",
@@ -1043,7 +1122,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "JH28940-260629.pdf"
+        "archivo": "JH28940-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "JH28942",
@@ -1056,7 +1136,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "JH28942-260629.pdf"
+        "archivo": "JH28942-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "JH40938",
@@ -1069,7 +1150,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "JH40938-260629.pdf"
+        "archivo": "JH40938-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "KH38284",
@@ -1082,7 +1164,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KH38284-260626.pdf"
+        "archivo": "KH38284-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "KH38288",
@@ -1095,7 +1178,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KH38288-260626.pdf"
+        "archivo": "KH38288-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "KH45098",
@@ -1108,7 +1192,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KH45098-260626.pdf"
+        "archivo": "KH45098-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "KJ15147",
@@ -1121,7 +1206,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KJ15147-260701(1).pdf"
+        "archivo": "KJ15147-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "KJ15150",
@@ -1134,7 +1220,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KJ15150-260626.pdf"
+        "archivo": "KJ15150-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "QH69950",
@@ -1147,7 +1234,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "QH69950-260701(1).pdf"
+        "archivo": "QH69950-260701(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "QH74232",
@@ -1160,7 +1248,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "QH74232-260702(1).pdf"
+        "archivo": "QH74232-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "SJ23938",
@@ -1173,7 +1262,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "SJ23938-260626.pdf"
+        "archivo": "SJ23938-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "TH16325",
@@ -1186,7 +1276,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "TH16325-260629.pdf"
+        "archivo": "TH16325-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "TH16334",
@@ -1199,7 +1290,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "TH16334-260710(1).pdf"
+        "archivo": "TH16334-260710(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05960",
@@ -1212,7 +1304,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05960-260629.pdf"
+        "archivo": "VH05960-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05961",
@@ -1225,7 +1318,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05961-260702(1).pdf"
+        "archivo": "VH05961-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05963",
@@ -1238,7 +1332,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05963-260629.pdf"
+        "archivo": "VH05963-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05964",
@@ -1251,7 +1346,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05964-260629.pdf"
+        "archivo": "VH05964-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05966",
@@ -1264,7 +1360,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05966-260702(1).pdf"
+        "archivo": "VH05966-260702(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05976",
@@ -1277,7 +1374,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05976-260629.pdf"
+        "archivo": "VH05976-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05977",
@@ -1290,7 +1388,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05977-260626.pdf"
+        "archivo": "VH05977-260626.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH05978",
@@ -1303,7 +1402,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH05978-260629.pdf"
+        "archivo": "VH05978-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23663",
@@ -1316,7 +1416,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23663-260629.pdf"
+        "archivo": "VH23663-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23664",
@@ -1329,7 +1430,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23664-260629.pdf"
+        "archivo": "VH23664-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23667",
@@ -1342,7 +1444,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23667-260629.pdf"
+        "archivo": "VH23667-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23668",
@@ -1355,7 +1458,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23668-260629.pdf"
+        "archivo": "VH23668-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23669",
@@ -1368,7 +1472,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23669-260629.pdf"
+        "archivo": "VH23669-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23670",
@@ -1381,7 +1486,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23670-260629.pdf"
+        "archivo": "VH23670-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23672",
@@ -1394,7 +1500,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23672-260629.pdf"
+        "archivo": "VH23672-260629.pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "VH23674",
@@ -1407,7 +1514,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23674-260703(1).pdf"
+        "archivo": "VH23674-260703(1).pdf",
+        "clinica": "BACKUP CMA"
       },
       {
         "serie": "WH05620",
@@ -1420,7 +1528,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "WH05620-260626.pdf"
+        "archivo": "WH05620-260626.pdf",
+        "clinica": "BACKUP CMA"
       }
     ],
     "CATAMARCA": [
@@ -1435,7 +1544,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "21121458-260812.pdf"
+        "archivo": "21121458-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26091766",
@@ -1448,7 +1558,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091766-260811.pdf"
+        "archivo": "26091766-260811.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26091790",
@@ -1461,7 +1572,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091790-260811.pdf"
+        "archivo": "26091790-260811.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26091800",
@@ -1474,7 +1586,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091800-260812.pdf"
+        "archivo": "26091800-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26101956",
@@ -1487,7 +1600,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26101956-260812.pdf"
+        "archivo": "26101956-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26101959",
@@ -1500,7 +1614,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26101959-260812.pdf"
+        "archivo": "26101959-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "26101960",
@@ -1513,7 +1628,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26101960-260812.pdf"
+        "archivo": "26101960-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "31112706",
@@ -1526,7 +1642,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "31112706-260812.pdf"
+        "archivo": "31112706-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "32061142",
@@ -1539,7 +1656,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061142-260812.pdf"
+        "archivo": "32061142-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "32061239",
@@ -1552,7 +1670,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061239-260812.pdf"
+        "archivo": "32061239-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "32061296",
@@ -1565,7 +1684,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061296-260812.pdf"
+        "archivo": "32061296-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "340442293",
@@ -1578,7 +1698,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442293-260812.pdf"
+        "archivo": "340442293-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "356642413",
@@ -1591,7 +1712,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "356642413-260812.pdf"
+        "archivo": "356642413-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "KJ27085",
@@ -1604,7 +1726,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KJ27085-260812.pdf"
+        "archivo": "KJ27085-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "SJ17044",
@@ -1617,7 +1740,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "SJ17044-260812.pdf"
+        "archivo": "SJ17044-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "SJ17055",
@@ -1630,7 +1754,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "SJ17055-260812.pdf"
+        "archivo": "SJ17055-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "VH23665",
@@ -1643,7 +1768,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23665-260812.pdf"
+        "archivo": "VH23665-260812.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "VH23671",
@@ -1656,7 +1782,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "VH23671-260629.pdf"
+        "archivo": "VH23671-260629.pdf",
+        "clinica": "CATAMARCA"
       },
       {
         "serie": "WH05621",
@@ -1669,7 +1796,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "WH05621-260812.pdf"
+        "archivo": "WH05621-260812.pdf",
+        "clinica": "CATAMARCA"
       }
     ],
     "CLO": [
@@ -1684,7 +1812,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26022583-260910.pdf"
+        "archivo": "26022583-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "26092302",
@@ -1697,7 +1826,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26092302-260910.pdf"
+        "archivo": "26092302-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "27021182",
@@ -1710,7 +1840,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27021182-260918.pdf"
+        "archivo": "27021182-260918.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "28041420",
@@ -1723,7 +1854,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "28041420-260910.pdf"
+        "archivo": "28041420-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "29072081",
@@ -1736,7 +1868,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "29072081-260910.pdf"
+        "archivo": "29072081-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "32031165",
@@ -1749,7 +1882,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32031165-260910.pdf"
+        "archivo": "32031165-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "32061253",
@@ -1762,7 +1896,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061253-260910.pdf"
+        "archivo": "32061253-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "32061297",
@@ -1775,7 +1910,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061297-260910.pdf"
+        "archivo": "32061297-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "33041678",
@@ -1788,7 +1924,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041678-260910.pdf"
+        "archivo": "33041678-260910.pdf",
+        "clinica": "CLO"
       },
       {
         "serie": "4306002",
@@ -1801,7 +1938,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "4306002-260918.pdf"
+        "archivo": "4306002-260918.pdf",
+        "clinica": "CLO"
       }
     ],
     "CyMSA": [
@@ -1816,7 +1954,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "22041704-260820.pdf"
+        "archivo": "22041704-260820.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "26081671",
@@ -1829,7 +1968,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26081671-260820.pdf"
+        "archivo": "26081671-260820.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "27011095",
@@ -1842,7 +1982,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27011095-260821.pdf"
+        "archivo": "27011095-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "27121273",
@@ -1855,7 +1996,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121273-260821.pdf"
+        "archivo": "27121273-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "29071534",
@@ -1868,7 +2010,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "29071534-260820.pdf"
+        "archivo": "29071534-260820.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "32032980",
@@ -1881,7 +2024,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32032980-260820.pdf"
+        "archivo": "32032980-260820.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "32061258",
@@ -1894,7 +2038,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061258-260821.pdf"
+        "archivo": "32061258-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "340442259",
@@ -1907,7 +2052,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442259-260821.pdf"
+        "archivo": "340442259-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "DH43750",
@@ -1920,7 +2066,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "DH43750-260821.pdf"
+        "archivo": "DH43750-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "EN37539",
@@ -1933,7 +2080,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "EN37539-260821.pdf"
+        "archivo": "EN37539-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "GH88031",
@@ -1946,7 +2094,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "GH88031-260821.pdf"
+        "archivo": "GH88031-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "JH45331",
@@ -1959,7 +2108,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "JH45331-260820.pdf"
+        "archivo": "JH45331-260820.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "KH38285",
@@ -1972,7 +2122,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "KH38285-260821.pdf"
+        "archivo": "KH38285-260821.pdf",
+        "clinica": "CyMSA"
       },
       {
         "serie": "SJ19758",
@@ -1985,7 +2136,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "SJ19758-260821.pdf"
+        "archivo": "SJ19758-260821.pdf",
+        "clinica": "CyMSA"
       }
     ],
     "DLA": [
@@ -2000,7 +2152,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "10061090-260827.pdf"
+        "archivo": "10061090-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "16042791",
@@ -2013,7 +2166,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "16042791-261005.pdf"
+        "archivo": "16042791-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "23111349",
@@ -2026,7 +2180,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "23111349-260806.pdf"
+        "archivo": "23111349-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "26081504",
@@ -2039,7 +2194,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26081504-261005.pdf"
+        "archivo": "26081504-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "26081670",
@@ -2052,7 +2208,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26081670-260827.pdf"
+        "archivo": "26081670-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "26091769",
@@ -2065,7 +2222,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091769-260827.pdf"
+        "archivo": "26091769-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "26091789",
@@ -2078,7 +2236,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26091789-260827.pdf"
+        "archivo": "26091789-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "26092383",
@@ -2091,7 +2250,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "26092383-260827.pdf"
+        "archivo": "26092383-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27021184",
@@ -2104,7 +2264,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27021184-260806.pdf"
+        "archivo": "27021184-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27021229",
@@ -2117,7 +2278,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27021229-260805.pdf"
+        "archivo": "27021229-260805.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27061172",
@@ -2130,7 +2292,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27061172-261005.pdf"
+        "archivo": "27061172-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27061179",
@@ -2143,7 +2306,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27061179-261005.pdf"
+        "archivo": "27061179-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27061181",
@@ -2156,7 +2320,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27061181-260806.pdf"
+        "archivo": "27061181-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27121877",
@@ -2169,7 +2334,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121877-260806.pdf"
+        "archivo": "27121877-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "27121884",
@@ -2182,7 +2348,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "27121884-260806.pdf"
+        "archivo": "27121884-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "32032637",
@@ -2195,7 +2362,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32032637-260827.pdf"
+        "archivo": "32032637-260827.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "32032961",
@@ -2208,7 +2376,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32032961-260806.pdf"
+        "archivo": "32032961-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "32061883",
@@ -2221,7 +2390,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "32061883-261005.pdf"
+        "archivo": "32061883-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "340442093",
@@ -2234,7 +2404,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442093-261005.pdf"
+        "archivo": "340442093-261005.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "540440004",
@@ -2247,7 +2418,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "540440004-260804.pdf"
+        "archivo": "540440004-260804.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "6121897",
@@ -2260,7 +2432,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "6121897-260806.pdf"
+        "archivo": "6121897-260806.pdf",
+        "clinica": "DLA"
       },
       {
         "serie": "CK01087",
@@ -2273,7 +2446,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "CK01087-260804.pdf"
+        "archivo": "CK01087-260804.pdf",
+        "clinica": "DLA"
       }
     ],
     "NDT": [
@@ -2288,7 +2462,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "28111269-260827.pdf"
+        "archivo": "28111269-260827.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "33041080",
@@ -2301,7 +2476,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33041080-260826.pdf"
+        "archivo": "33041080-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "33051676",
@@ -2314,7 +2490,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33051676-260731.pdf"
+        "archivo": "33051676-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "33051689",
@@ -2327,7 +2504,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "33051689-260826.pdf"
+        "archivo": "33051689-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34071308",
@@ -2340,7 +2518,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34071308-260826.pdf"
+        "archivo": "34071308-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34081011",
@@ -2353,7 +2532,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34081011-260731.pdf"
+        "archivo": "34081011-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34091185",
@@ -2366,7 +2546,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34091185-260826.pdf"
+        "archivo": "34091185-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34091186",
@@ -2379,7 +2560,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34091186-260826.pdf"
+        "archivo": "34091186-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34091187",
@@ -2392,7 +2574,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34091187-260731.pdf"
+        "archivo": "34091187-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34091730",
@@ -2405,7 +2588,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34091730-260731.pdf"
+        "archivo": "34091730-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34091738",
@@ -2418,7 +2602,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34091738-260826.pdf"
+        "archivo": "34091738-260826.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34101082",
@@ -2431,7 +2616,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34101082-260731.pdf"
+        "archivo": "34101082-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34101089",
@@ -2444,7 +2630,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34101089-260731.pdf"
+        "archivo": "34101089-260731.pdf",
+        "clinica": "NDT"
       },
       {
         "serie": "34111097",
@@ -2457,7 +2644,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "34111097-260731.pdf"
+        "archivo": "34111097-260731.pdf",
+        "clinica": "NDT"
       }
     ],
     "ZABALA": [
@@ -2472,7 +2660,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "20101534-260813.pdf"
+        "archivo": "20101534-260813.pdf",
+        "clinica": "ZABALA"
       },
       {
         "serie": "340442028",
@@ -2485,7 +2674,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442028-260731.pdf"
+        "archivo": "340442028-260731.pdf",
+        "clinica": "ZABALA"
       },
       {
         "serie": "340442284",
@@ -2498,7 +2688,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442284-260813.pdf"
+        "archivo": "340442284-260813.pdf",
+        "clinica": "ZABALA"
       },
       {
         "serie": "340442287",
@@ -2511,7 +2702,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "340442287-260813.pdf"
+        "archivo": "340442287-260813.pdf",
+        "clinica": "ZABALA"
       },
       {
         "serie": "640461091",
@@ -2524,7 +2716,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "640461091-260813.pdf"
+        "archivo": "640461091-260813.pdf",
+        "clinica": "ZABALA"
       },
       {
         "serie": "FJ25774",
@@ -2537,7 +2730,8 @@
         "ubicacion": "",
         "observaciones": "",
         "verificado": "",
-        "archivo": "FJ25774-260813.pdf"
+        "archivo": "FJ25774-260813.pdf",
+        "clinica": "ZABALA"
       }
     ]
   }
