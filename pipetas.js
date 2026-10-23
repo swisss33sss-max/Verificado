@@ -64,17 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const ioFeedback = document.getElementById('ioFeedback');
     const filterSerieInput = document.getElementById('filterSerieInput');
     const filterMagnitudInput = document.getElementById('filterMagnitudInput');
+    const filterUbicacionInput = document.getElementById('filterUbicacionInput');
 
     const verifyModal = document.getElementById('verifyModal');
     const verifyInput = document.getElementById('verifyInput');
     const verifySuggestions = document.getElementById('verifySuggestions');
     const verifyFeedback = document.getElementById('verifyFeedback');
+    const verifyMatchInfo = document.getElementById('verifyMatchInfo');
+    const verifyCalibGroup = document.getElementById('verifyCalibGroup');
+    const verifyCalib = document.getElementById('verifyCalib');
     const confirmVerifyBtn = document.getElementById('confirmVerifyBtn');
     const cancelVerifyBtn = document.getElementById('cancelVerifyBtn');
 
     const editModal = document.getElementById('editModal');
     const editModalTitle = document.getElementById('editModalTitle');
     const editSerie = document.getElementById('editSerie');
+    const editClinica = document.getElementById('editClinica');
+    const editUbicacion = document.getElementById('editUbicacion');
     const editMagnitud = document.getElementById('editMagnitud');
     const editCalib = document.getElementById('editCalib');
     const editVenc = document.getElementById('editVenc');
@@ -194,9 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (valido) {
             resultsArea.classList.remove('hidden');
             verifyBtn.classList.remove('disabled');
-            // En modo "Todas" no se permite registrar nuevo (no se sabe la clínica destino)
-            if (clinicaActual === TODAS) registerBtn.classList.add('disabled');
-            else registerBtn.classList.remove('disabled');
+            registerBtn.classList.remove('disabled'); // en "Todas" se elige la clínica en el modal
             renderTabla(); renderStats();
         } else {
             resultsArea.classList.add('hidden');
@@ -278,13 +282,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const thead = document.querySelector('#tableMain thead');
         const tbody = document.querySelector('#tableMain tbody');
         const todas = esModoTodas();
-        thead.innerHTML = `<tr>${todas ? '<th>Clínica</th>' : ''}<th>Serie</th><th>Magnitud</th><th>Calibración</th><th>Vencimiento</th><th>Estado</th><th>Verificado</th><th>Modelo</th><th>Observaciones</th></tr>`;
+        thead.innerHTML = `<tr>${todas ? '<th>Clínica</th>' : ''}<th>Serie</th><th>Ubicación</th><th>Magnitud</th><th>Calibración</th><th>Vencimiento</th><th>Estado</th><th>Verificado</th><th>Modelo</th><th>Observaciones</th></tr>`;
         tbody.innerHTML = '';
         const fs = (filterSerieInput.value || '').trim().toUpperCase();
         const fm = (filterMagnitudInput.value || '').trim().toUpperCase();
+        const fu = (filterUbicacionInput.value || '').trim().toUpperCase();
         listaActual().forEach((p, idx) => {
             if (fs && !String(p.serie).toUpperCase().includes(fs)) return;
             if (fm && !String(p.magnitud).toUpperCase().includes(fm)) return;
+            if (fu && !String(p.ubicacion || '').toUpperCase().includes(fu)) return;
             const ev = estadoVencimiento(p.fecha_vencimiento);
             const tr = document.createElement('tr');
             tr.style.cursor = 'pointer';
@@ -292,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.innerHTML = `
                 ${todas ? `<td><span class="badge" style="background:rgba(0,217,255,0.15);color:#00d9ff">${p.clinica || ''}</span></td>` : ''}
                 <td><strong>${p.serie || ''}</strong></td>
+                <td>${p.ubicacion || ''}</td>
                 <td>${p.magnitud || ''}</td>
                 <td>${p.fecha_calibracion || ''}</td>
                 <td>${p.fecha_vencimiento || ''}</td>
@@ -305,13 +312,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterSerieInput.addEventListener('input', renderTabla);
     filterMagnitudInput.addEventListener('input', renderTabla);
+    filterUbicacionInput.addEventListener('input', renderTabla);
 
     // =========================================================
     // VERIFICAR POR SERIE
     // =========================================================
+    function calcVencDesdeCalib(fechaCalib) {
+        // "dd/mm/aaaa" -> "mm/aaaa" + 1 año
+        const m = (fechaCalib || '').match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+        if (!m) return '';
+        return `${m[2].padStart(2, '0')}/${parseInt(m[3], 10) + 1}`;
+    }
+
+    function mostrarMatchVerify(p) {
+        if (!p) {
+            verifyMatchInfo.classList.add('hidden');
+            verifyCalibGroup.style.display = 'none';
+            return;
+        }
+        verifyMatchInfo.innerHTML = `<strong>${p.serie}</strong>${p.clinica ? ' · ' + p.clinica : ''}<br>` +
+            `${p.ubicacion ? '📍 ' + p.ubicacion + '<br>' : ''}` +
+            `⚖️ ${p.magnitud || 's/f'} · Calib: ${p.fecha_calibracion || 's/f'} · Vence: ${p.fecha_vencimiento || 's/f'}`;
+        verifyMatchInfo.classList.remove('hidden');
+        verifyCalib.value = fechaCalibToInput(p.fecha_calibracion);
+        verifyCalibGroup.style.display = 'block';
+    }
+
     verifyBtn.addEventListener('click', () => {
         if (verifyBtn.classList.contains('disabled')) return alertFeedback(actionFeedback, '⚠️ Selecciona una clínica primero.', 'warning');
         verifyInput.value = ''; verifyFeedback.classList.add('hidden'); verifySuggestions.classList.add('hidden');
+        mostrarMatchVerify(null);
         verifyModal.classList.remove('hidden'); verifyInput.focus();
     });
     cancelVerifyBtn.addEventListener('click', () => verifyModal.classList.add('hidden'));
@@ -319,14 +349,17 @@ document.addEventListener('DOMContentLoaded', () => {
     verifyInput.addEventListener('input', () => {
         const val = verifyInput.value.trim().toUpperCase();
         verifySuggestions.innerHTML = '';
+        // Si coincide exacto, mostrar info + campo calibración
+        const exact = listaActual().find(p => String(p.serie).toUpperCase() === val);
+        mostrarMatchVerify(exact || null);
         if (val.length < 2) { verifySuggestions.classList.add('hidden'); return; }
         const matches = listaActual().filter(p => String(p.serie).toUpperCase().includes(val)).slice(0, 10);
         if (!matches.length) { verifySuggestions.classList.add('hidden'); return; }
         matches.forEach(p => {
             const div = document.createElement('div');
             div.className = 'suggestion-item';
-            div.innerHTML = `<strong>${p.serie}</strong><small>${p.magnitud} | vence ${p.fecha_vencimiento || 's/f'}</small>`;
-            div.addEventListener('click', () => { verifyInput.value = p.serie; verifySuggestions.classList.add('hidden'); confirmVerifyBtn.click(); });
+            div.innerHTML = `<strong>${p.serie}</strong><small>${p.clinica ? p.clinica + ' | ' : ''}${p.magnitud} | vence ${p.fecha_vencimiento || 's/f'}</small>`;
+            div.addEventListener('click', () => { verifyInput.value = p.serie; verifySuggestions.classList.add('hidden'); mostrarMatchVerify(p); });
             verifySuggestions.appendChild(div);
         });
         verifySuggestions.classList.remove('hidden');
@@ -338,9 +371,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!val) return alertFeedback(verifyFeedback, '⚠️ Ingresa un número de serie', 'warning');
         const lista = listaActual();
         const idx = lista.findIndex(p => String(p.serie).toUpperCase() === val);
-        if (idx === -1) return alertFeedback(verifyFeedback, `❌ Serie "${val}" no encontrada en ${clinicaActual}`, 'error');
-        lista[idx].verificado = '✅';
+        if (idx === -1) return alertFeedback(verifyFeedback, `❌ Serie "${val}" no encontrada`, 'error');
         const p = lista[idx];
+        p.verificado = '✅';
+        // Actualizar fecha de calibración si se cambió, y recalcular vencimiento (+1 año)
+        const nuevaCalib = inputToFechaCalib(verifyCalib.value);
+        if (nuevaCalib && nuevaCalib !== p.fecha_calibracion) {
+            p.fecha_calibracion = nuevaCalib;
+            const nv = calcVencDesdeCalib(nuevaCalib);
+            if (nv) p.fecha_vencimiento = nv;
+        }
         const ev = estadoVencimiento(p.fecha_vencimiento);
         alertFeedback(verifyFeedback, `✅ ${p.serie} verificada. Magnitud: ${p.magnitud}. Calibración: ${p.fecha_calibracion}. Vence: ${p.fecha_vencimiento} (${ev.texto}). Guardando...`, 'success');
         renderTabla(); renderStats();
@@ -361,16 +401,29 @@ document.addEventListener('DOMContentLoaded', () => {
         abrirEdicion(-1);
     });
 
+    let editClinicaOrigen = ''; // clínica donde está la pipeta al editar
+
+    function poblarClinicaSelectEdit(seleccion) {
+        const cls = Object.keys(estado.clinicas).sort();
+        editClinica.innerHTML = cls.map(c => `<option value="${c}">${c}</option>`).join('');
+        if (seleccion) editClinica.value = seleccion;
+    }
+
     function abrirEdicion(idx) {
         editIndex = idx; editFeedback.classList.add('hidden');
         if (idx === -1) {
             editModalTitle.textContent = '📝 Registrar Pipeta';
-            editSerie.value = ''; editMagnitud.value = ''; editCalib.value = '';
+            editClinicaOrigen = esModoTodas() ? '' : clinicaActual;
+            poblarClinicaSelectEdit(editClinicaOrigen);
+            editSerie.value = ''; editUbicacion.value = ''; editMagnitud.value = ''; editCalib.value = '';
             editVenc.value = ''; editModelo.value = ''; editObs.value = '';
         } else {
             const p = listaActual()[idx];
             editModalTitle.textContent = '✏️ Editar Pipeta';
-            editSerie.value = p.serie; editMagnitud.value = p.magnitud || '';
+            editClinicaOrigen = p.clinica || clinicaActual;
+            poblarClinicaSelectEdit(editClinicaOrigen);
+            editSerie.value = p.serie; editUbicacion.value = p.ubicacion || '';
+            editMagnitud.value = p.magnitud || '';
             editCalib.value = fechaCalibToInput(p.fecha_calibracion);
             editVenc.value = vencToInput(p.fecha_vencimiento);
             editModelo.value = p.modelo || ''; editObs.value = p.observaciones || '';
@@ -382,22 +435,43 @@ document.addEventListener('DOMContentLoaded', () => {
     saveEditBtn.addEventListener('click', async () => {
         const serie = editSerie.value.trim().toUpperCase();
         if (!serie) return alertFeedback(editFeedback, '⚠️ Ingresa el número de serie', 'warning');
-        const lista = listaActual();
+        const clinicaDestino = editClinica.value;
+        if (!clinicaDestino) return alertFeedback(editFeedback, '⚠️ Selecciona la clínica', 'warning');
+        if (!estado.clinicas[clinicaDestino]) estado.clinicas[clinicaDestino] = [];
+
         const datos = {
             serie,
+            ubicacion: editUbicacion.value.trim(),
             magnitud: editMagnitud.value.trim(),
             fecha_calibracion: inputToFechaCalib(editCalib.value),
             fecha_vencimiento: inputToVenc(editVenc.value),
             modelo: editModelo.value.trim(),
             observaciones: editObs.value.trim()
         };
+
         if (editIndex === -1) {
-            if (lista.some(p => String(p.serie).toUpperCase() === serie))
-                return alertFeedback(editFeedback, `⚠️ La serie "${serie}" ya existe en ${clinicaActual}`, 'warning');
-            lista.push(Object.assign({ objeto: '', clase: '', ubicacion: '', verificado: '✅', archivo: '' }, datos));
+            // NUEVO
+            if (estado.clinicas[clinicaDestino].some(p => String(p.serie).toUpperCase() === serie))
+                return alertFeedback(editFeedback, `⚠️ La serie "${serie}" ya existe en ${clinicaDestino}`, 'warning');
+            estado.clinicas[clinicaDestino].push(Object.assign({ objeto: '', clase: '', verificado: '✅', archivo: '', clinica: clinicaDestino }, datos));
         } else {
-            Object.assign(lista[editIndex], datos, { verificado: '✅' });
+            // EDITAR (y posible movimiento de clínica)
+            const obj = listaActual()[editIndex]; // objeto por referencia
+            const origen = editClinicaOrigen || obj.clinica || clinicaActual;
+            if (clinicaDestino !== origen) {
+                // mover: quitar de origen, agregar a destino
+                const arrOrig = estado.clinicas[origen] || [];
+                const i = arrOrig.indexOf(obj);
+                if (i !== -1) arrOrig.splice(i, 1);
+                Object.assign(obj, datos, { verificado: '✅', clinica: clinicaDestino });
+                estado.clinicas[clinicaDestino].push(obj);
+            } else {
+                Object.assign(obj, datos, { verificado: '✅', clinica: clinicaDestino });
+            }
         }
+        poblarClinicas();
+        // re-seleccionar la clínica actual en el dropdown si seguimos en una concreta
+        if (!esModoTodas()) clinicaSelect.value = clinicaActual;
         renderTabla(); renderStats();
         alertFeedback(editFeedback, 'Guardando en GitHub...', 'success');
         try { await saveDB(); alertFeedback(editFeedback, '✅ Guardado en GitHub.', 'success'); setTimeout(() => editModal.classList.add('hidden'), 900); }
