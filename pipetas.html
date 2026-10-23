@@ -227,7 +227,7 @@
         <div id="resultsArea" class="card hidden">
             <h2>📊 Pipetas de la Clínica</h2>
             <div class="stats-row" id="statsRow"></div>
-            <div class="grid-2-col" style="margin-bottom:16px;">
+            <div class="grid-2-col" style="margin-bottom:12px;">
                 <div class="input-group" style="margin-bottom:0;">
                     <label>🔍 Filtrar por Serie</label>
                     <input type="text" id="filterSerieInput" placeholder="Serie..." style="text-transform:uppercase;">
@@ -236,6 +236,10 @@
                     <label>⚖️ Filtrar por Magnitud</label>
                     <input type="text" id="filterMagnitudInput" placeholder="Magnitud...">
                 </div>
+            </div>
+            <div class="input-group" style="margin-bottom:16px;">
+                <label>📍 Filtrar por Ubicación Técnica</label>
+                <input type="text" id="filterUbicacionInput" placeholder="Ubicación... (ej: IC-SM-CAT)" style="text-transform:uppercase;">
             </div>
             <div class="table-container">
                 <table id="tableMain">
@@ -255,6 +259,11 @@
                 <input type="text" id="verifyInput" placeholder="Ej: KJ27085" style="text-transform:uppercase;" autocomplete="off">
                 <div id="verifySuggestions" class="suggestions-list hidden"></div>
             </div>
+            <div id="verifyMatchInfo" class="hidden" style="background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.25);border-radius:10px;padding:10px;margin-bottom:12px;font-size:0.85rem;color:#ccc;"></div>
+            <div class="input-group" id="verifyCalibGroup" style="display:none;">
+                <label>📅 Actualizar Fecha de Calibración</label>
+                <input type="date" id="verifyCalib">
+            </div>
             <div id="verifyFeedback" class="feedback hidden"></div>
             <div class="btn-row" style="margin-top:16px;">
                 <button id="confirmVerifyBtn" class="btn btn-success" style="flex:1;">Verificar</button>
@@ -270,6 +279,14 @@
             <div class="input-group">
                 <label>Número de Serie</label>
                 <input type="text" id="editSerie" placeholder="Ej: KJ27085" style="text-transform:uppercase;">
+            </div>
+            <div class="input-group">
+                <label>Clínica</label>
+                <select id="editClinica"></select>
+            </div>
+            <div class="input-group">
+                <label>Ubicación Técnica</label>
+                <input type="text" id="editUbicacion" placeholder="Ej: IC-SM-CAT-03">
             </div>
             <div class="input-group">
                 <label>Magnitud</label>
